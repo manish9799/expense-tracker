@@ -45,7 +45,7 @@ const getValue = (type) => {
         localStorage.setItem('transactions',JSON.stringify(transactionsDetails))
         localStorage.setItem('balanceDetails',JSON.stringify(balanceDetails))
         transactionsList()
-        clear()
+        clearValue()
     }
 }
 
