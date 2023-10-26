@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="mainContainer">
+        <h2 class="app-name">Expense Tracker</h2>
+        <div class="container">
+            <div class="expenses scroll">
+                <div class="total-balance">
+                    <h3>Total Balance Remaining</h3>
+                    <h1 id="total" class="total">0</h1>
+                </div>
+                <div class="show-amount">
+                    <div class="income">
+                        <h3>Total Income</h3>
+                        <h1 id="income" class="green">0</h1>
+                    </div>
+                    <div class="expense">
+                        <h3>Total Expense</h3>
+                        <h1 id="expense" class='red'>0</h1>
+                    </div>
+                </div>
+                <hr>
+                    <div class="input-box">
+                        <div class="input-feilds">
+                            <input type="number" min="0" id="customAmount" class="customInput" value="" placeholder="Enter Amount...">
+                            <input type="text" id="customTitle" class="customInput" value="" placeholder="Enter Title...">
+                            <input type="date" id="customDate" class="customInput" value="" >
+                        </div>
+                    </div>
+                    <div class="manage-income">
+                        <button class="add addbtn btn" onclick="getValue('add')">Add Income</button>
+                        <button id="clear" class=" clear addbtn btn" onclick="clearValue()">Clear</button>
+                        <button class="minus addbtn btn" onclick="getValue('minus')">Add Expense</button>
+                    </div>
+            </div>
+            <div class="transactions-box scroll">
+                <h2>Transactions</h2>
+                <hr>
+                <div id="table"></div>
+            </div>
+        </div>
+        <h3 class="footer">Created by @ Manish Katara</h3>
+
+    </div>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
